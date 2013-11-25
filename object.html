@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      function Animal(especie) {
+        this.especie = especie;
+      }
+      Animal.prototype.getEspecie = function() {
+        return this.especie;
+      }
+      function Perro(raza) {
+        Animal.call(this, "perro");
+        this.raza = raza;
+      }
+      Perro.prototype = new Animal();
+      Perro.prototype.describir = function() {
+        return this.getEspecie() + ", de raza " + this.raza;
+      }
+
+      //pagina 145
+    </script>
+    
+  </body>
+</html>       
