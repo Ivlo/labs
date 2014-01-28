@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+   <meta charset="utf-8">
+   <title></title>
+   <meta name="description" content="">
+  </head>
+
+  <body>
+    <script type="text/javascript">
+    
+    // En JS los objetos heredan de otros objetos
+    // En Javascript todo es una instancia, y cuando heredamos de un objeto también se puede decir que estamos creando una instancia de ése objeto, para evitar confunsiones suele decirse que un objeto “extiende” otro
+    //__proto__ no es un estandar
+
+  //_____ Inicio ejemplo __proto__  ________
+    var a = {
+      uno:1,
+      dos:2
+    }
+
+    var b = {
+      tres:3,
+      cuatro:4
+    }
+    a.__proto__=b;
+    a.__proto__.tres="ivan"
+    console.log(a.tres)
+    console.log(b.tres);
+    console.log(b.__proto__ === Object.prototype)
+    console.log(Object.prototype)
+
+  //_____ Fin ejemplo __proto__  ________
+
+  // Como implementamos la herencia en JavaScript ya que proto no es un estandar. Con constructores
+
+  //Toda función, creada en Javascript tiene una propiedad llamada .prototype. Los objetos que creemos llamando a ésa función con new tendrán su [[Prototype]] apuntando a la propiedad prototype de la función:
+
+  function Example() { }
+  console.log(Example.prototype);
+
+  var obj = new Example();
+  console.log(obj.__proto__)
+
+  //example
+
+  function Func () {
+    this.sexo='Hombre'
+  }
+  Func.prototype = {
+    name:"Ivan",
+    lastname:"Lopez"
+  }
+
+  var instancia1 = new Func();
+  console.log(instancia1.__proto__);
+  console.log(instancia1.sexo)
+
+
+  //Herencia Clasica
+
+  function MiClase () {
+    this.unaPropiedad = "valor";
+    this.otraPropiedad = "otro valor"
+  }
+
+  MiClase.prototype.unMetodo = function() {
+    console.log(this.unaPropiedad)
+  }
+
+  MiClase.prototype.otroMetodo = function() {
+    console.log(this.otraPropiedad);
+  }
+
+  var instancia = new MiClase();
+  instancia.otroMetodo();
+
+
+
+
+    
+    
+
+
+
+    
+    </script>
+  </body>
+
+</html>

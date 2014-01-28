@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+   <meta charset="utf-8">
+   <title></title>
+   <meta name="description" content="">
+  </head>
+
+  <body>
+    <script type="text/javascript">
+    function Person(name) {
+
+      if(!name)
+        throw("Person needs a name")
+
+      this.name = name;
+      this.init();
+    }
+
+    Person.prototype.walk = function(){};
+    Person.prototype.init = function(){};
+    Person.prototype.sayHello = function(){
+      alert('hola, me llamo '+this.name);
+    };
+
+
+    function Student(name){
+      Person.call(this, name)
+    }
+
+    // hereda Person
+    var temp_prototype = function(){}
+    temp_prototype.prototype = Person.prototype;
+    Student.prototype = new temp_prototype();
+    Student.prototype.constructor = Student;
+
+    Student.prototype.sayHello = function(){
+      alert("hola, soy el estudiante "+this.name)
+      Person.prototype.sayHello.call(this);
+    }
+
+    var ivan = new Student("ivan"),
+        sergio = new Person("Sergio");
+
+    </script>
+  </body>
+
+</html>

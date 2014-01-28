@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+
+  <script type="text/javascript">
+  function clausurator() {
+    var a =1;
+    return function () {
+      return a;
+    }
+  }
+  var fn= clausurator();
+
+  function makeContador() {
+    var i=0;
+    return function () {
+      return i++;
+    }
+  }
+  var contador1 = makeContador();
+  var contador2 = makeContador()
+
+  function interesante () {
+    var algo=0;
+    return {
+      get:function() {
+        return algo;
+      },
+      set:function(valor) {
+        return algo = valor;
+      }
+    }
+  }
+  var obj= interesante();
+
+  function bind(ctx,fn) {
+    return function() {
+      return fn.apply(ctx,arguments)
+    }
+  }
+  var bind= bind();
+
+  var holder = {}
+  for(var i = 0; i < 10; i++){
+    holder["method_"+i] = (function(i){
+                            return function(){
+                                      console.log(i)
+                                    }
+                          })(i);
+  }
+
+  </script>
+  
+</body>
+</html>

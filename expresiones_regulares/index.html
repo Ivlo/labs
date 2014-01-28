@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+<script type="text/javascript">
+//http://chuwiki.chuidiang.org/index.php?title=Expresiones_regulares_en_javascript
+  var reg=/ivan/;
+  var action = "hola ivan como estas".match(reg)
+
+  //escapar
+  var esc = "esto contiene *".match(/\*/)
+  //buscar ivan
+  var ivan = "ivan".match(/[a-z]/)
+
+  //que no este en la cadena
+  var no_cad= "2233 ivan".match(/[^0-9]/);
+
+  //letras
+  var letters = "ivan".match(/\w{1,}/)
+
+</script> 
+</body>
+</html>

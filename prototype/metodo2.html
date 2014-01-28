@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+   <meta charset="utf-8">
+   <title></title>
+   <meta name="description" content="">
+  </head>
+
+  <body>
+    <script type="text/javascript">
+    function Person(name) {
+      this.name = name;
+      alert(this.name)
+    }
+
+    Person.prototype.walk = function(){console.log('estoy caminando')};
+    Person.prototype.init = function(){};
+    Person.prototype.sayHello = function(){
+      alert('hola, me llamo '+this.name);
+    };
+
+    function Student(name){
+      // Person.call(this, name)
+    }
+      
+    
+
+    var temp_prototype = function(){}
+    temp_prototype.prototype = Person.prototype;
+    Student.prototype = new temp_prototype();
+    //Esto para que es¿?
+    // Student.prototype.constructor = Student;
+    console.log(Student.prototype.constructor);
+
+    Student.prototype.sayHello = function(){
+      alert("hola, soy el estudiante "+this.name)
+      //Person.prototype.sayHello.call(this);
+    }
+    var ivan = new Student("ivan");
+        // sergio= new Person("sergio");
+    </script>
+  </body>
+
+</html>

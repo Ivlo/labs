@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+  </head>
+  <body>
+
+    <script>
+
+    function Person(name, sex){
+      if(!name)
+        throw("Una persona necesita un nombre")
+
+      this.name = name;
+      this.sex = sex;
+      this.init();
+      this.sup.call(this, name, sex)
+    }
+
+    Person.prototype.init = function(){
+      console.log("Inicializando mandanga")
+    }
+
+    Person.prototype.greet = function(){
+      alert("Hola me llamo "+this.name)
+    }
+
+    Person.prototype.specie = "Homo sapiens";
+
+    function Student(name, sex){
+      this.sup.call(this, name, sex)
+    }
+
+    var temp_constructor = function(){};
+    temp_constructor.prototype = Person.prototype;
+    Student.prototype = new temp_constructor();
+    Student.prototype.constructor = Student;
+    Student.prototype.sup = Person;
+
+    Student.prototype.greet = function(){
+      alert("Hola, soy un estudiante")
+      this.sup.prototype.greet.call(this)
+    }
+
+    </script>
+    
+  </body>
+</html>

@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <script type="text/javascript">
+
+  function Element(){
+
+  }
+
+  Element.prototype.get_id = function(){
+    console.log("getting checkbox id")
+  }
+
+  function Input(){
+
+  }
+
+  Input.prototype = new Element();
+  Input.prototype.constructor = Input;
+
+  Input.prototype.disable = function(){
+    console.log("disable checkbox")
+  }
+
+  Input.prototype.enable = function(){
+    console.log("enable checkbox")
+  }
+
+
+  function Checkbox(){
+    console.log("Initing Checkbox")
+  }
+
+  Checkbox.prototype = new Input();
+  Checkbox.prototype.constructor = Checkbox;
+
+  Checkbox.prototype.check = function(){
+    console.log("checking checkbox")
+  }
+
+  Checkbox.prototype.uncheck = function(){
+    console.log("unchecking checkbox")
+  }
+
+  function Radio(){
+    console.log("Initing Radio")
+  }
+
+  Radio.prototype = new Checkbox();
+  Radio.prototype.constructor = Radio;
+
+  Radio.prototype.check = function(){
+    console.log("checking radio")
+  }
+
+  Radio.prototype.uncheck = function(){
+    console.log("unchecking radio")
+  }
+
+  </script>
+
+  
+</body>
+</html>
