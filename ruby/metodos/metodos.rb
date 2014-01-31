@@ -18,7 +18,7 @@ end
 #ARGUMENTOS INFINITOS
 
 def play (instrument, *songs ,band)
-  puts" playing #{songs.join(', ')} width my #{instrument} to #{band} "
+  puts" playing #{songs.join(', ')} width my #{instrument} to #{band}"
 end
 
-play "guitar", "Rape me", "alive", "the man who sold the world, nirvana"
+play "guitar", "Rape me", "alive", "the man who sold the world", "nirvana"
