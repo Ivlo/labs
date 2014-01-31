@@ -44,8 +44,14 @@
   }
   var bind= bind();
 
-  var holder = {}
+  var holder = {};
+
+  var on_click = function(e){
+    alert(e.data.index)
+  }
+
   for(var i = 0; i < 10; i++){
+    element.on("click", {index:i}, on_click)
     holder["method_"+i] = (function(i){
                             return function(){
                                       console.log(i)

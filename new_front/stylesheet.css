@@ -1,0 +1,168 @@
+.m_filter_videos{
+  font-size: x-small;
+  border: 1px solid #D9D9D9;
+  background-color: #F6F6F6;
+}
+
+.m_filter_videos_header{
+  overflow: hidden;
+  padding: 15px;
+  font-size: 1.2em;
+  text-transform: uppercase;
+}
+.m_filter_videos_header strong{
+  float: left;
+  color: #333333;
+}
+.m_filter_videos_header a{
+  float: right;
+}
+
+.m_filter_videos_header .btn_show{
+  font-size: 1em;
+  color: #666666;
+}
+
+.m_filter_videos_content [data-filter-category], .m_filter_offers_content [data-filter-category], .m_filter_videos_content [data-filter-category] .checkbox, .m_filter_offers_content [data-filter-category] .checkbox, .m_filter_videos_content [data-filter-category] .radio, .m_filter_offers_content [data-filter-category] .radio, .m_filter_videos_content [data-filter-category] label, .m_filter_offers_content [data-filter-category] label {
+  display: none;
+}
+.m_filter_videos_content a[data-filter-by], .m_filter_offers_content a[data-filter-by] {
+  display: none;
+}
+
+.trending_hidden {
+  display: none !important;
+}
+
+.m_filters_visible {
+  display: inline-block !important;
+}
+
+.m_filter_videos_content, .m_filter_offers_content {
+  overflow: hidden;
+  -webkit-transition: height 500ms cubic-bezier(0.19, 1, 0.22, 1);
+  -moz-transition: height 500ms cubic-bezier(0.19, 1, 0.22, 1);
+  -ms-transition: height 500ms cubic-bezier(0.19, 1, 0.22, 1);
+  -o-transition: height 500ms cubic-bezier(0.19, 1, 0.22, 1);
+  transition: height 500ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+.m_filter_videos_content fieldset, .m_filter_offers_content fieldset {
+  width: 19.6%;
+  vertical-align: top;
+  border-left: 1px solid #D9D9D9;
+}
+.m_filter_videos_content fieldset a, .m_filter_offers_content fieldset a {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #0255a5;
+  text-decoration: none;
+}
+.m_filter_videos_content fieldset:first-child, .m_filter_offers_content fieldset:first-child {
+  border-left: none;
+}
+.m_filter_videos_content fieldset > *, .m_filter_offers_content fieldset > * {
+  margin-left: 10px;
+}
+.m_filter_videos_content legend, .m_filter_offers_content legend {
+  display: none;
+}
+.m_filter_videos_content p > *, .m_filter_offers_content p > * {
+  vertical-align: middle;
+  margin-bottom: 8px;
+}
+.m_filter_videos_content label, .m_filter_offers_content label {
+  font-size: 1.3em;
+  color: #666666;
+  max-width: 94px;
+}
+
+.m_filter_videos.expanded .m_filter_videos_header, .expanded.m_filter_offers .m_filter_videos_header, .m_filter_videos.expanded .m_filter_offers_header, .expanded.m_filter_offers .m_filter_offers_header {
+  border-bottom: 1px solid #D9D9D9;
+}
+
+.m_filter_videos_content_title {
+  display: block;
+  padding-top: 10px;
+  margin-bottom: 14px;
+  font-size: 1.2em;
+  color: #333333;
+  text-transform: uppercase;
+}
+
+.m_filter_videos_content_box_action {
+  display: none;
+}
+
+.m_filter_keywords {
+  border-top: 1px solid #D9D9D9;
+  padding: 10px;
+  overflow: hidden;
+}
+
+.m_filter_keywords_box {
+  float: left;
+  max-width: 748px;
+}
+.m_filter_keywords_box > * {
+  margin-right: 10px;
+}
+.m_filter_keywords_box label {
+  display: none;
+}
+.m_filter_keywords_box input {
+  max-width: 180px;
+  padding: 9px 51px 9px 9px;
+  font-size: 1.2em;
+  font-style: italic;
+  color: #333333;
+  border: 1px solid #D9D9D9;
+}
+.m_filter_keywords_box span {
+  position: relative;
+  padding: 9px 30px 9px 9px;
+  margin-bottom: 4px;
+  border: 1px solid #C0C0C0;
+  background-color: #DEDEDE;
+  font-size: 1.2em;
+  color: #333333;
+  cursor: pointer;
+}
+.m_filter_keywords_box span:after {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  top: 50%;
+  right: 10px;
+  margin-top: -6px;
+  background-repeat: no-repeat;
+  background-position: left right;
+}
+.m_filter_keywords_box p {
+  position: relative;
+}
+
+.m_filter_keywords_box_add {
+  position: absolute;
+  width: 17px;
+  height: 16px;
+  top: 50%;
+  right: 9px;
+  margin-top: -11px;
+  background-repeat: no-repeat;
+  background-position: left right;
+}
+
+.m_filter_keywords_actions {
+  float: right;
+}
+.m_filter_keywords_actions > * {
+  vertical-align: middle;
+}
+.m_filter_keywords_actions a {
+  color: #0255a5;
+  font-size: 1.2em;
+  vertical-align: middle;
+  text-decoration: none;
+  margin-right: 10px;
+}
